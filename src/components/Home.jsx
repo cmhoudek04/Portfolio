@@ -36,8 +36,10 @@ export default function Home() {
         {/* Container with button to download resume */}
         <div className="mt-6 flex justify-center">
             <a
-              href="/resume.pdf"
-              download
+              href={`${import.meta.env.BASE_URL}/resume.pdf`}
+              target="_blank"
+              rel="noopener noreferrer"
+              download="Resume_Conner_Houdek.pdf"
               className="flex items-center px-4 py-3 bg-yellow-200 text-black rounded hover:scale-110 transition-transform">
                 <FaDownload className="text-black text-xl mr-4" /> <span className="text-xl text-mono text-black">Download Resume</span>
               </a>
