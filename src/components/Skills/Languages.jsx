@@ -25,7 +25,7 @@ export default function Languages() {
             </div>   
             <div className="flex flex-col justify-center items-center px-6 py-3 bg-yellow-200 rounded-xl">
                 <SiAssemblyscript className="text-black text-7xl pb-4"></SiAssemblyscript>
-                <p className="font-mono text-black text-4xl">Assembly</p>
+                <p className="font-mono text-black text-4xl">ARM Assembly</p>
             </div>   
             <div className="flex flex-col justify-center items-center px-6 py-3 bg-yellow-200 rounded-xl">
                 <img src={Csharp} alt="C#" className="h-20 pb-2" />
