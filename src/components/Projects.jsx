@@ -39,6 +39,19 @@ export default function Projects () {
                             <span className="text-yellow-200 text-2xl">Github</span>
                     </a>
                 </div>
+                {/* Real Simple File System */}
+                <div className="flex flex-col items-center px-6 py-3 bg-yellow-200 rounded-xl">
+                    <h2 className="font-mono text-black text-4xl pb-2">Real Simple File System</h2>
+                    <p className="font-mono text-black text-xl pb-2">
+                        A simple UNIX file system implemented in C.
+                    </p>
+                    <a
+                        href="https://github.com/MadHyyper/Real-Simple-File-System"
+                        target="_blank"
+                        className="flex items-center px-3 py-2 bg-black text-black rounded-xl hover:scale-110 transition-transform">
+                            <span className="text-yellow-200 text-2xl">Github</span>
+                    </a>
+                </div>
                 {/* Portfolio */}
                 <div className="flex flex-col items-center px-6 py-3 bg-yellow-200 rounded-xl">
                     <h2 className="font-mono text-black text-4xl pb-2">This Website!</h2>
