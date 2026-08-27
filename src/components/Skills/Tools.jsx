@@ -1,51 +1,52 @@
 import "../../App.css";
 import { SiDocker, SiSpringboot, SiHtml5, SiCss3, SiNodedotjs, SiMysql, SiMongodb, SiGit, SiTailwindcss } from "react-icons/si";
 import { FaMicrochip } from "react-icons/fa";
+import { motion, useReducedMotion } from "motion/react";
 
+const { div: MotionDiv } = motion;
+
+const items = [
+    { name: "Docker", icon: <SiDocker className="text-7xl pb-4 text-black" /> },
+    { name: "Spring Boot", icon: <SiSpringboot className="text-7xl pb-4 text-black" /> },
+    { name: "HTML", icon: <SiHtml5 className="text-7xl pb-4 text-black" /> },
+    { name: "CSS", icon: <SiCss3 className="text-7xl pb-4 text-black" /> },
+    { name: "Tailwind", icon: <SiTailwindcss className="text-7xl pb-4 text-black" /> },
+    { name: "NodeJS", icon: <SiNodedotjs className="text-7xl pb-4 text-black" /> },
+    { name: "MySql", icon: <SiMysql className="text-7xl pb-4 text-black" /> },
+    { name: "MongoDB", icon: <SiMongodb className="text-7xl pb-4 text-black" /> },
+    { name: "Git", icon: <SiGit className="text-7xl pb-4 text-black" /> },
+    { name: "FPGA Design", icon: <FaMicrochip className="text-7xl pb-4 text-black" /> },
+];
+
+const card = {
+    hidden: { opacity: 0, scale: 0.92 },
+    show: (i) => ({
+        opacity: 1,
+        scale: 1,
+        transition: { delay: i * 0.04, duration: 0.35, ease: "easeOut" },
+    }),
+};
 
 export default function Tools() {
+    const reduce = useReducedMotion();
+
     return (
         <div className="grid grid-cols-4 gap-4">
-            <div className="flex flex-col justify-center items-center px-6 py-3 bg-yellow-200 rounded-xl">
-                <SiDocker className="text-black text-7xl pb-4"></SiDocker>
-                <p className="font-mono text-black text-4xl">Docker</p>
-            </div>
-            <div className="flex flex-col justify-center items-center px-6 py-3 bg-yellow-200 rounded-xl">
-                <SiSpringboot className="text-black text-7xl pb-4"></SiSpringboot>
-                <p className="font-mono text-black text-4xl">Spring Boot</p>
-            </div>
-            <div className="flex flex-col justify-center items-center px-6 py-3 bg-yellow-200 rounded-xl">
-                <SiHtml5 className="text-black text-7xl pb-4"></SiHtml5>
-                <p className="font-mono text-black text-4xl">HTML</p>
-            </div>
-            <div className="flex flex-col justify-center items-center px-6 py-3 bg-yellow-200 rounded-xl">
-                <SiCss3 className="text-black text-7xl pb-4"></SiCss3>
-                <p className="font-mono text-black text-4xl">CSS</p>
-            </div>   
-            <div className="flex flex-col justify-center items-center px-6 py-3 bg-yellow-200 rounded-xl">
-                <SiTailwindcss className="text-black text-7xl pb-4"></SiTailwindcss>
-                <p className="font-mono text-black text-4xl">Tailwind</p>
-            </div>   
-            <div className="flex flex-col justify-center items-center px-6 py-3 bg-yellow-200 rounded-xl">
-                <SiNodedotjs className="text-black text-7xl pb-4"></SiNodedotjs>
-                <p className="font-mono text-black text-4xl">NodeJS</p>
-            </div>
-            <div className="flex flex-col justify-center items-center px-6 py-3 bg-yellow-200 rounded-xl">
-                <SiMysql className="text-black text-7xl pb-4"></SiMysql>
-                <p className="font-mono text-black text-4xl">MySql</p>
-            </div>
-            <div className="flex flex-col justify-center items-center px-6 py-3 bg-yellow-200 rounded-xl">
-                <SiMongodb className="text-black text-7xl pb-4"></SiMongodb>
-                <p className="font-mono text-black text-4xl">MongoDB</p>
-            </div>
-            <div className="flex flex-col justify-center items-center px-6 py-3 bg-yellow-200 rounded-xl">
-                <SiGit className="text-black text-7xl pb-4"></SiGit>
-                <p className="font-mono text-black text-4xl">Git</p>
-            </div>
-            <div className="flex flex-col justify-center items-center px-6 py-3 bg-yellow-200 rounded-xl">
-                <FaMicrochip className="text-black text-7xl pb-4"></FaMicrochip>
-                <p className="font-mono text-black text-4xl">FPGA Design</p>
-            </div>
+            {items.map((item, i) => (
+                <MotionDiv
+                    key={item.name}
+                    custom={i}
+                    variants={reduce ? undefined : card}
+                    initial={reduce ? undefined : "hidden"}
+                    animate={reduce ? undefined : "show"}
+                    whileHover={{ y: reduce ? 0 : -6, scale: reduce ? 1 : 1.03 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                    className="flex flex-col justify-center items-center px-6 py-3 bg-yellow-200 rounded-xl shadow-sm"
+                >
+                    {item.icon}
+                    <p className="font-mono text-black text-4xl">{item.name}</p>
+                </MotionDiv>
+            ))}
         </div>
     )
 }
