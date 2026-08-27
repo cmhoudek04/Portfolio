@@ -33,6 +33,13 @@ export default function Skills() {
 
     return (
         <main style={{ position: 'relative', zIndex: 1 }}>
+            <MotionDiv
+                className="mx-auto w-full rounded-2xl bg-[#0a1c27]/60 px-6 py-8 backdrop-blur-sm ring-1 ring-white/10"
+                initial={{ opacity: 0, y: reduce ? 0 : 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+            >
             <MotionH1
                 className="font-mono text-white pb-4"
                 initial={{ opacity: 0, y: reduce ? 0 : 16 }}
@@ -91,7 +98,7 @@ export default function Skills() {
                 </MotionButton>
             </MotionDiv>
 
-            <div className="mt-6 flex justify-center gap-6 overflow-hidden">
+            <div className="mt-6 flex justify-center gap-6 overflow-x-clip">
                 {/* Content */}
                 <AnimatePresence mode="wait">
                     <MotionDiv
@@ -105,6 +112,7 @@ export default function Skills() {
                     </MotionDiv>
                 </AnimatePresence>
             </div>
+            </MotionDiv>
         </main>
     )
 }

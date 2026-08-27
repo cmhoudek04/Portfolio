@@ -51,6 +51,13 @@ export default function Projects() {
 
     return (
         <main style={{ position: 'relative', zIndex: 1 }}>
+            <MotionDiv
+                className="mx-auto w-full rounded-2xl bg-[#0a1c27]/60 px-6 py-8 backdrop-blur-sm ring-1 ring-white/10"
+                initial={{ opacity: 0, y: reduce ? 0 : 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+            >
             <MotionH1
                 className="font-mono text-white pb-4"
                 initial={{ opacity: 0, y: reduce ? 0 : 16 }}
@@ -101,6 +108,7 @@ export default function Projects() {
                     </MotionDiv>
                 ))}
             </div>
+            </MotionDiv>
         </main>
     )
 }

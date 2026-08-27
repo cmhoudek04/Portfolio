@@ -14,6 +14,13 @@ export default function Contact() {
 
     return (
         <main style={{ position: 'relative', zIndex: 1 }}>
+            <MotionDiv
+                className="mx-auto w-full rounded-2xl bg-[#0a1c27]/60 px-6 py-8 backdrop-blur-sm ring-1 ring-white/10"
+                variants={fade}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, margin: "-80px" }}
+            >
             <MotionH1
                 className="font-mono text-white pb-4"
                 variants={fade}
@@ -43,6 +50,7 @@ export default function Contact() {
                     <span className="font-mono text-black text-2xl pl-2 pr-2 -translate-y-0.5">Email me</span>
                     <MdMail className="text-black text-2xl"></MdMail>
                 </a>
+            </MotionDiv>
             </MotionDiv>
         </main>
     )
