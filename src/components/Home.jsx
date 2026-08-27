@@ -18,7 +18,7 @@ export default function Home() {
         {/* Container which stores icon-button links to github and linkedin */}
         <div className="mt-6 flex justify-center gap-6">
             <a
-              href="https://github.com/MadHyyper"
+              href="https://github.com/cmhoudek04"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:scale-110 transition-transform">
