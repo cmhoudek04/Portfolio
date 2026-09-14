@@ -7,14 +7,14 @@ import { motion, useReducedMotion } from "motion/react";
 const { div: MotionDiv } = motion;
 
 const items = [
-    { name: "Python", icon: <SiPython className="text-5xl pb-2 text-black sm:text-7xl sm:pb-4" /> },
     { name: "C", icon: <SiC className="text-5xl pb-2 text-black sm:text-7xl sm:pb-4" /> },
-    { name: "JavaScript", icon: <SiJavascript className="text-5xl pb-2 text-black sm:text-7xl sm:pb-4" /> },
-    { name: "PHP", icon: <SiPhp className="text-5xl pb-2 text-black sm:text-7xl sm:pb-4" /> },
-    { name: "ARM Assembly", icon: <SiAssemblyscript className="text-5xl pb-2 text-black sm:text-7xl sm:pb-4" /> },
+    { name: "C++", icon: <SiCplusplus className="text-5xl pb-2 text-black sm:text-7xl sm:pb-4" /> },
     { name: "C#", icon: <img src={Csharp} alt="C#" className="h-16 pb-1 text-black sm:h-20 sm:pb-2" /> },
     { name: "Java", icon: <FaJava className="text-5xl pb-2 text-black sm:text-7xl sm:pb-4" /> },
-    { name: "C++", icon: <SiCplusplus className="text-5xl pb-2 text-black sm:text-7xl sm:pb-4" /> },
+    { name: "JavaScript", icon: <SiJavascript className="text-5xl pb-2 text-black sm:text-7xl sm:pb-4" /> },
+    { name: "PHP", icon: <SiPhp className="text-5xl pb-2 text-black sm:text-7xl sm:pb-4" /> },
+    { name: "Python", icon: <SiPython className="text-5xl pb-2 text-black sm:text-7xl sm:pb-4" /> },
+    { name: "ARM Assembly", icon: <SiAssemblyscript className="text-5xl pb-2 text-black sm:text-7xl sm:pb-4" /> },
 ];
 
 const card = {
