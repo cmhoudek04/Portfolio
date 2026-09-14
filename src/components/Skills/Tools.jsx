@@ -6,7 +6,6 @@ import { motion, useReducedMotion } from "motion/react";
 const { div: MotionDiv } = motion;
 
 const items = [
-    { name: "Docker", icon: <SiDocker className="text-5xl pb-2 text-black sm:text-7xl sm:pb-4" /> },
     { name: "Spring Boot", icon: <SiSpringboot className="text-5xl pb-2 text-black sm:text-7xl sm:pb-4" /> },
     { name: "HTML", icon: <SiHtml5 className="text-5xl pb-2 text-black sm:text-7xl sm:pb-4" /> },
     { name: "CSS", icon: <SiCss3 className="text-5xl pb-2 text-black sm:text-7xl sm:pb-4" /> },
@@ -15,6 +14,7 @@ const items = [
     { name: "MySql", icon: <SiMysql className="text-5xl pb-2 text-black sm:text-7xl sm:pb-4" /> },
     { name: "MongoDB", icon: <SiMongodb className="text-5xl pb-2 text-black sm:text-7xl sm:pb-4" /> },
     { name: "Git", icon: <SiGit className="text-5xl pb-2 text-black sm:text-7xl sm:pb-4" /> },
+    { name: "Docker", icon: <SiDocker className="text-5xl pb-2 text-black sm:text-7xl sm:pb-4" /> },
     { name: "FPGA Design", icon: <FaMicrochip className="text-5xl pb-2 text-black sm:text-7xl sm:pb-4" /> },
 ];
 

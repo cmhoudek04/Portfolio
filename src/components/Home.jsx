@@ -83,9 +83,7 @@ export default function Home() {
           animate="show"
         >
           <a
-            href={`${import.meta.env.BASE_URL}/resume.pdf`}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={`${import.meta.env.BASE_URL}resume.pdf`}
             download="Resume_Conner_Houdek.pdf"
             className="flex items-center px-4 py-3 bg-yellow-200 text-black rounded shadow-lg shadow-yellow-200/20 transition-transform duration-300 hover:scale-110 hover:-translate-y-1"
           >

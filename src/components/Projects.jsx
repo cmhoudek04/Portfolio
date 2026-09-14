@@ -8,17 +8,17 @@ const projects = [
         name: "Tripmates",
         description: "An itinerary planner app developed with Android studio, Spring Boot, and Java.",
         demo: "https://www.youtube.com/watch?v=Q8cpGkN5yD8&list=PL6BdlkdKLEB-RhBjBTGRFWf87xXYjf9tq&index=18",
-        github: "https://github.com/MadHyyper/Tripmates",
+        github: "https://github.com/cmhoudek04/Tripmates",
     },
     {
         name: "Taco Truck",
         description: "A group project where we wrote C scripts to embedded hardware to make an autonomous motor vehicle deliver prop tacos to points on a map.",
-        github: "https://github.com/MadHyyper/Taco-Truck-Project",
+        github: "https://github.com/cmhoudek04/Taco-Truck-Project",
     },
     {
         name: "Real Simple File System",
         description: "A simple UNIX file system implemented in C.",
-        github: "https://github.com/MadHyyper/Real-Simple-File-System",
+        github: "https://github.com/cmhoudek04/Real-Simple-File-System",
     },
     {
         name: "Simple Shell",
@@ -28,17 +28,17 @@ const projects = [
     {
         name: "This Website!",
         description: "Portfolio website created with React and JavaScript using tsparticles.",
-        github: "https://github.com/MadHyyper/Portfolio",
+        github: "https://github.com/cmhoudek04/Portfolio",
     },
     {
         name: "Memory Game",
         description: "A console game written with C using a PS4 controller for input.",
-        github: "https://github.com/MadHyyper/Memory-Game",
+        github: "https://github.com/cmhoudek04/Memory-Game",
     },
     {
         name: "Color Splash",
         description: "Rudimentary platformer video game developed in Godot with GDScript.",
-        github: "https://github.com/MadHyyper/color-splash",
+        github: "https://github.com/cmhoudek04/color-splash",
     },
 ];
 
