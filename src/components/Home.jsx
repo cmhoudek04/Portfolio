@@ -39,9 +39,10 @@ export default function Home() {
           animate="show"
         >
           <p className="font-mono text-lg text-white sm:text-2xl">
-            My name is Conner Houdek. I am a senior in software engineering at Iowa State University who is passionate about software and problem solving. 
-            I am experienced with several languages, frameworks, and tools alongside a growing list of completed and varied projects. 
-            I am seeking opportunities to utilize skills with web development, embedded systems, and app development.
+            My name is Conner Houdek, a Senior Software Engineering student at Iowa State University, graduating in May 2027. I am passionate about 
+            building software and solving complex problems, with experience across a variety of programming languages, frameworks, and development tools. 
+            Through a diverse range of projects, I've developed practical skills in web development, embedded systems, and application development. 
+            I'm seeking software engineering opportunities where I can contribute to meaningful projects, apply my technical skills, and continue to grow as an engineer.
           </p>
         </MotionDiv>
 
