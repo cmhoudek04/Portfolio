@@ -39,7 +39,7 @@ export default function Home() {
           animate="show"
         >
           <p className="font-mono text-2xl text-white">
-            My name is <span className="text-yellow-200">Conner Houdek</span>. I am a junior in software engineering at Iowa State University who is <span className="text-yellow-200">passionate</span> about <span className="text-yellow-200">software</span> and <span className="text-yellow-200">problem solving</span>.
+            My name is <span className="text-yellow-200">Conner Houdek</span>. I am a senior in software engineering at Iowa State University who is <span className="text-yellow-200">passionate</span> about <span className="text-yellow-200">software</span> and <span className="text-yellow-200">problem solving</span>.
             I am experienced with several <span className="text-yellow-200">languages</span>, <span className="text-yellow-200">frameworks</span>, and <span className="text-yellow-200">tools </span>
             alongside a growing list of <span className="text-yellow-200">completed</span> and <span className="text-yellow-200">varied</span> projects. I am seeking opportunities to utilize skills
             with <span className="text-yellow-200">web development</span>, <span className="text-yellow-200">embedded systems</span>, and <span className="text-yellow-200">app development</span>.
