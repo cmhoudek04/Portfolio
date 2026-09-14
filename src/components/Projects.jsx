@@ -21,6 +21,11 @@ const projects = [
         github: "https://github.com/MadHyyper/Real-Simple-File-System",
     },
     {
+        name: "Simple Shell",
+        description: "A simple UNIX shell implemented in C.",
+        github: "https://github.com/cmhoudek04/C-Shell"
+    },
+    {
         name: "This Website!",
         description: "Portfolio website created with React and JavaScript using tsparticles.",
         github: "https://github.com/MadHyyper/Portfolio",
