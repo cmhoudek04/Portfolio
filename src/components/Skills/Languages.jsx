@@ -1,5 +1,5 @@
 import "../../App.css";
-import { SiC, SiPython, SiJavascript, SiPhp, SiAssemblyscript } from "react-icons/si";
+import { SiC, SiCplusplus, SiPython, SiJavascript, SiPhp, SiAssemblyscript } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
 import Csharp from "../../assets/Csharp.svg";
 import { motion, useReducedMotion } from "motion/react";
@@ -14,6 +14,7 @@ const items = [
     { name: "ARM Assembly", icon: <SiAssemblyscript className="text-5xl pb-2 text-black sm:text-7xl sm:pb-4" /> },
     { name: "C#", icon: <img src={Csharp} alt="C#" className="h-16 pb-1 text-black sm:h-20 sm:pb-2" /> },
     { name: "Java", icon: <FaJava className="text-5xl pb-2 text-black sm:text-7xl sm:pb-4" /> },
+    { name: "C++", icon: <SiCplusplus className="text-5xl pb-2 text-black sm:text-7xl sm:pb-4" /> },
 ];
 
 const card = {
