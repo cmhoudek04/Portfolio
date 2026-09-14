@@ -6,16 +6,16 @@ import { motion, useReducedMotion } from "motion/react";
 const { div: MotionDiv } = motion;
 
 const items = [
-    { name: "Docker", icon: <SiDocker className="text-7xl pb-4 text-black" /> },
-    { name: "Spring Boot", icon: <SiSpringboot className="text-7xl pb-4 text-black" /> },
-    { name: "HTML", icon: <SiHtml5 className="text-7xl pb-4 text-black" /> },
-    { name: "CSS", icon: <SiCss3 className="text-7xl pb-4 text-black" /> },
-    { name: "Tailwind", icon: <SiTailwindcss className="text-7xl pb-4 text-black" /> },
-    { name: "NodeJS", icon: <SiNodedotjs className="text-7xl pb-4 text-black" /> },
-    { name: "MySql", icon: <SiMysql className="text-7xl pb-4 text-black" /> },
-    { name: "MongoDB", icon: <SiMongodb className="text-7xl pb-4 text-black" /> },
-    { name: "Git", icon: <SiGit className="text-7xl pb-4 text-black" /> },
-    { name: "FPGA Design", icon: <FaMicrochip className="text-7xl pb-4 text-black" /> },
+    { name: "Docker", icon: <SiDocker className="text-5xl pb-2 text-black sm:text-7xl sm:pb-4" /> },
+    { name: "Spring Boot", icon: <SiSpringboot className="text-5xl pb-2 text-black sm:text-7xl sm:pb-4" /> },
+    { name: "HTML", icon: <SiHtml5 className="text-5xl pb-2 text-black sm:text-7xl sm:pb-4" /> },
+    { name: "CSS", icon: <SiCss3 className="text-5xl pb-2 text-black sm:text-7xl sm:pb-4" /> },
+    { name: "Tailwind", icon: <SiTailwindcss className="text-5xl pb-2 text-black sm:text-7xl sm:pb-4" /> },
+    { name: "NodeJS", icon: <SiNodedotjs className="text-5xl pb-2 text-black sm:text-7xl sm:pb-4" /> },
+    { name: "MySql", icon: <SiMysql className="text-5xl pb-2 text-black sm:text-7xl sm:pb-4" /> },
+    { name: "MongoDB", icon: <SiMongodb className="text-5xl pb-2 text-black sm:text-7xl sm:pb-4" /> },
+    { name: "Git", icon: <SiGit className="text-5xl pb-2 text-black sm:text-7xl sm:pb-4" /> },
+    { name: "FPGA Design", icon: <FaMicrochip className="text-5xl pb-2 text-black sm:text-7xl sm:pb-4" /> },
 ];
 
 const card = {
@@ -31,7 +31,7 @@ export default function Tools() {
     const reduce = useReducedMotion();
 
     return (
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
             {items.map((item, i) => (
                 <MotionDiv
                     key={item.name}
@@ -44,7 +44,7 @@ export default function Tools() {
                     className="flex flex-col justify-center items-center px-6 py-3 bg-yellow-200 rounded-xl shadow-sm"
                 >
                     {item.icon}
-                    <p className="font-mono text-black text-4xl">{item.name}</p>
+                    <p className="font-mono text-black text-xl sm:text-4xl">{item.name}</p>
                 </MotionDiv>
             ))}
         </div>

@@ -5,10 +5,10 @@ import { motion, useReducedMotion } from "motion/react";
 const { div: MotionDiv } = motion;
 
 const items = [
-    { name: "React", icon: <SiReact className="text-7xl pb-4 text-black" /> },
-    { name: "Laravel", icon: <SiLaravel className="text-7xl pb-4 text-black" /> },
+    { name: "React", icon: <SiReact className="text-5xl pb-2 text-black sm:text-7xl sm:pb-4" /> },
+    { name: "Laravel", icon: <SiLaravel className="text-5xl pb-2 text-black sm:text-7xl sm:pb-4" /> },
     { name: ".NET", icon: <SiDotnet className="text-7xl pb-4 text-black translate-x-1" /> },
-    { name: "Android Studio", icon: <SiAndroidstudio className="text-7xl pb-4 text-black" /> },
+    { name: "Android Studio", icon: <SiAndroidstudio className="text-5xl pb-2 text-black sm:text-7xl sm:pb-4" /> },
 ];
 
 const card = {
@@ -24,7 +24,7 @@ export default function Frameworks() {
     const reduce = useReducedMotion();
 
     return (
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
             {items.map((item, i) => (
                 <MotionDiv
                     key={item.name}
@@ -37,7 +37,7 @@ export default function Frameworks() {
                     className="flex flex-col justify-center items-center px-6 py-3 bg-yellow-200 rounded-xl shadow-sm"
                 >
                     {item.icon}
-                    <p className="font-mono text-black text-4xl -translate-x-0.5">{item.name}</p>
+                    <p className="font-mono text-black text-xl -translate-x-0.5 sm:text-4xl">{item.name}</p>
                 </MotionDiv>
             ))}
         </div>

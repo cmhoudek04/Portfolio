@@ -7,6 +7,12 @@
   text-align: center;
 }
 
+@media (max-width: 640px) {
+  #root {
+    padding: 1rem;
+  }
+}
+
 .text-outline-black {
   -webkit-text-stroke: 1px black; /*For webkit browsers*/
 }

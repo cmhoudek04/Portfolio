@@ -34,7 +34,7 @@ export default function Skills() {
     return (
         <main style={{ position: 'relative', zIndex: 1 }}>
             <MotionDiv
-                className="mx-auto w-full rounded-2xl bg-[#0a1c27]/60 px-6 py-8 backdrop-blur-sm ring-1 ring-white/10"
+                className="mx-auto w-full rounded-2xl bg-[#0a1c27]/60 px-4 py-8 backdrop-blur-sm ring-1 ring-white/10 sm:px-6"
                 initial={{ opacity: 0, y: reduce ? 0 : 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
@@ -55,7 +55,7 @@ export default function Skills() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.5, delay: 0.05, ease: "easeOut" }}
-                className="grid grid-cols-[1fr_auto_1fr] items-center w-[400px] mx-auto"
+                className="grid grid-cols-[1fr_auto_1fr] items-center w-full max-w-[400px] mx-auto"
             >
                 {/* Header */}
                 <MotionButton

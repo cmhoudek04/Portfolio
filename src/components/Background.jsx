@@ -5,7 +5,23 @@ import { isMobile } from "react-device-detect";
 
 export default function Home() {
     const [init, setInit] = useState(false);
-    const particleCount = isMobile ? 45 : 170;
+
+    // Lighter config on mobile for performance while keeping the same look
+    const config = isMobile ? {
+        particleCount: 35,
+        fpsLimit: 60,
+        linkDistance: 150,
+        linkOpacity: 0.25,
+        size: 3,
+        speed: 0.6,
+    } : {
+        particleCount: 170,
+        fpsLimit: 120,
+        linkDistance: 150,
+        linkOpacity: 1,
+        size: 4,
+        speed: 1,
+    };
 
     // Initialize particle engine
     useEffect(() => {
@@ -35,7 +51,7 @@ export default function Home() {
                     }
                 },
 
-                fpsLimit: 120,
+                fpsLimit: config.fpsLimit,
 
                 particles: {
                     color: {
@@ -43,15 +59,17 @@ export default function Home() {
                     },
                     links: {
                         color: "rgba(36, 97, 122, 1)", // Grey links
+                        distance: config.linkDistance,
+                        opacity: config.linkOpacity,
                     },
                     move: {
-                        speed: 1 // Moderate speed
+                        speed: config.speed // Moderate speed
                     },
                     size: {
-                        value: 4 // Medium size
+                        value: config.size // Medium size
                     },
                     number: {
-                        value: particleCount, // 45 for mobile, 220 for desktop.
+                        value: config.particleCount, // 15 for mobile, 170 for desktop.
                     }
                 },
             }}

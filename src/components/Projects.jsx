@@ -68,7 +68,7 @@ export default function Projects() {
                 Projects
             </MotionH1>
 
-            <div className="grid grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
                 {projects.map((project, i) => (
                     <MotionDiv
                         key={project.name}
@@ -81,8 +81,8 @@ export default function Projects() {
                         transition={{ type: "spring", stiffness: 300, damping: 22 }}
                         className="flex flex-col items-center px-6 py-3 bg-yellow-200 rounded-xl"
                     >
-                        <h2 className="font-mono text-black text-4xl pb-2">{project.name}</h2>
-                        <p className="font-mono text-black text-xl pb-2">
+                        <h2 className="font-mono text-black text-2xl pb-2 sm:text-4xl">{project.name}</h2>
+                        <p className="font-mono text-black text-base pb-2 sm:text-xl">
                             {project.description}
                         </p>
                         <div className="mt-auto flex flex-col items-center gap-2">

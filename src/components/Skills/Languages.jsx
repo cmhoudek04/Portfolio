@@ -7,13 +7,13 @@ import { motion, useReducedMotion } from "motion/react";
 const { div: MotionDiv } = motion;
 
 const items = [
-    { name: "Python", icon: <SiPython className="text-7xl pb-4 text-black" /> },
-    { name: "C", icon: <SiC className="text-7xl pb-4 text-black" /> },
-    { name: "JavaScript", icon: <SiJavascript className="text-7xl pb-4 text-black" /> },
-    { name: "PHP", icon: <SiPhp className="text-7xl pb-4 text-black" /> },
-    { name: "ARM Assembly", icon: <SiAssemblyscript className="text-7xl pb-4 text-black" /> },
-    { name: "C#", icon: <img src={Csharp} alt="C#" className="h-20 pb-2 text-black" /> },
-    { name: "Java", icon: <FaJava className="text-7xl pb-4 text-black" /> },
+    { name: "Python", icon: <SiPython className="text-5xl pb-2 text-black sm:text-7xl sm:pb-4" /> },
+    { name: "C", icon: <SiC className="text-5xl pb-2 text-black sm:text-7xl sm:pb-4" /> },
+    { name: "JavaScript", icon: <SiJavascript className="text-5xl pb-2 text-black sm:text-7xl sm:pb-4" /> },
+    { name: "PHP", icon: <SiPhp className="text-5xl pb-2 text-black sm:text-7xl sm:pb-4" /> },
+    { name: "ARM Assembly", icon: <SiAssemblyscript className="text-5xl pb-2 text-black sm:text-7xl sm:pb-4" /> },
+    { name: "C#", icon: <img src={Csharp} alt="C#" className="h-16 pb-1 text-black sm:h-20 sm:pb-2" /> },
+    { name: "Java", icon: <FaJava className="text-5xl pb-2 text-black sm:text-7xl sm:pb-4" /> },
 ];
 
 const card = {
@@ -29,7 +29,7 @@ export default function Languages() {
     const reduce = useReducedMotion();
 
     return (
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
             {items.map((item, i) => (
                 <MotionDiv
                     key={item.name}
@@ -42,7 +42,7 @@ export default function Languages() {
                     className="flex flex-col justify-center items-center px-6 py-3 bg-yellow-200 rounded-xl shadow-sm"
                 >
                     {item.icon}
-                    <p className="font-mono text-black text-4xl">{item.name}</p>
+                    <p className="font-mono text-black text-xl sm:text-4xl">{item.name}</p>
                 </MotionDiv>
             ))}
         </div>

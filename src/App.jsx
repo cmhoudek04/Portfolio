@@ -8,7 +8,7 @@ import Contact from "./components/Contact.jsx";
 function App() {
 
   return (
-    <div className="space-y-30">
+    <div className="space-y-16 sm:space-y-30">
       <Background />
       <Home />
       <Skills />
