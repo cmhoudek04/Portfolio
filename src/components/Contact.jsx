@@ -39,7 +39,7 @@ export default function Contact() {
                 transition={{ delay: 0.1 }}
             >
                 <p className="font-mono text-base text-white pb-4 sm:text-2xl">
-                    If you would like to contact me, feel free to reach out to me!
+                    Interested in getting in touch? Feel free to reach out!
                 </p>
                 <a
                     href="mailto:cmhoudek04@gmail.com"
