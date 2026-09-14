@@ -34,14 +34,14 @@ export default function Skills() {
     return (
         <main style={{ position: 'relative', zIndex: 1 }}>
             <MotionDiv
-                className="mx-auto w-full rounded-2xl bg-[#0a1c27]/60 px-4 py-8 backdrop-blur-sm ring-1 ring-white/10 sm:px-6"
+                className="mx-auto w-full rounded-2xl bg-[#0a1c27]/60 px-4 py-6 backdrop-blur-sm ring-1 ring-white/10 sm:px-6"
                 initial={{ opacity: 0, y: reduce ? 0 : 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.5, ease: "easeOut" }}
             >
             <MotionH1
-                className="font-mono text-white pb-4"
+                className="font-mono text-white pb-4 text-3xl sm:text-5xl"
                 initial={{ opacity: 0, y: reduce ? 0 : 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
@@ -55,7 +55,7 @@ export default function Skills() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.5, delay: 0.05, ease: "easeOut" }}
-                className="grid grid-cols-[1fr_auto_1fr] items-center w-full max-w-[400px] mx-auto"
+                className="grid grid-cols-[1fr_auto_1fr] items-center w-full max-w-[280px] sm:max-w-[400px] mx-auto"
             >
                 {/* Header */}
                 <MotionButton
@@ -68,13 +68,13 @@ export default function Skills() {
                     onClick={prev}
                     aria-label="Previous skills category"
                 >
-                    <FaChevronLeft className="text-black text-xl" />
+                    <FaChevronLeft className="text-black text-sm sm:text-xl" />
                 </MotionButton>
 
                 <AnimatePresence mode="wait">
                     <MotionH2
                         key={views[index].label}
-                        className="font-mono text-center text-yellow-200 pb-1 text-4xl"
+                        className="font-mono text-center text-yellow-200 pb-1 text-2xl sm:text-4xl"
                         initial={{ opacity: 0, y: reduce ? 0 : -10 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: reduce ? 0 : 10 }}
@@ -94,7 +94,7 @@ export default function Skills() {
                     onClick={next}
                     aria-label="Next skills category"
                 >
-                    <FaChevronRight className="text-black text-xl" />
+                    <FaChevronRight className="text-black text-sm sm:text-xl" />
                 </MotionButton>
             </MotionDiv>
 

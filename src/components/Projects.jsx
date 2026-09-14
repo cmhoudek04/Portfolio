@@ -57,14 +57,14 @@ export default function Projects() {
     return (
         <main style={{ position: 'relative', zIndex: 1 }}>
             <MotionDiv
-                className="mx-auto w-full rounded-2xl bg-[#0a1c27]/60 px-6 py-8 backdrop-blur-sm ring-1 ring-white/10"
+                className="mx-auto w-full rounded-2xl bg-[#0a1c27]/60 px-4 py-8 backdrop-blur-sm ring-1 ring-white/10 sm:px-6"
                 initial={{ opacity: 0, y: reduce ? 0 : 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.5, ease: "easeOut" }}
             >
             <MotionH1
-                className="font-mono text-white pb-4"
+                className="font-mono text-white pb-4 text-3xl sm:text-5xl"
                 initial={{ opacity: 0, y: reduce ? 0 : 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
@@ -73,7 +73,7 @@ export default function Projects() {
                 Projects
             </MotionH1>
 
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4">
                 {projects.map((project, i) => (
                     <MotionDiv
                         key={project.name}
@@ -84,30 +84,30 @@ export default function Projects() {
                         custom={i}
                         whileHover={{ y: reduce ? 0 : -6, scale: reduce ? 1 : 1.02 }}
                         transition={{ type: "spring", stiffness: 300, damping: 22 }}
-                        className="flex flex-col items-center px-6 py-3 bg-yellow-200 rounded-xl"
+                        className="flex flex-col items-center px-2 py-1.5 bg-yellow-200 rounded-xl sm:px-4 sm:py-2"
                     >
-                        <h2 className="font-mono text-black text-2xl pb-2 sm:text-4xl">{project.name}</h2>
-                        <p className="font-mono text-black text-base pb-2 sm:text-xl">
+                        <h2 className="font-mono text-black text-base pb-1 sm:text-2xl sm:pb-2">{project.name}</h2>
+                        <p className="font-mono text-black text-xs pb-1 sm:text-base sm:pb-2">
                             {project.description}
                         </p>
-                        <div className="mt-auto flex flex-col items-center gap-2">
+                        <div className="mt-auto flex flex-row items-center justify-center gap-2">
                             {project.demo && (
                                 <a
                                     href={project.demo}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex mb-2 items-center px-3 py-2 bg-black text-black rounded-xl hover:scale-110 transition-transform"
+                                    className="flex items-center px-2 py-1 bg-black text-black rounded-xl hover:scale-110 transition-transform sm:px-3 sm:py-1.5"
                                 >
-                                    <span className="text-yellow-200 text-2xl">Demo</span>
+                                    <span className="text-yellow-200 text-sm sm:text-lg">Demo</span>
                                 </a>
                             )}
                             <a
                                 href={project.github}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex items-center px-3 py-2 bg-black text-black rounded-xl hover:scale-110 transition-transform"
+                                className="flex items-center px-2 py-1 bg-black text-black rounded-xl hover:scale-110 transition-transform sm:px-3 sm:py-1.5"
                             >
-                                <span className="text-yellow-200 text-2xl">Github</span>
+                                <span className="text-yellow-200 text-sm sm:text-lg">Github</span>
                             </a>
                         </div>
                     </MotionDiv>

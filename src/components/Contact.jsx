@@ -15,14 +15,14 @@ export default function Contact() {
     return (
         <main style={{ position: 'relative', zIndex: 1 }}>
             <MotionDiv
-                className="mx-auto w-full rounded-2xl bg-[#0a1c27]/60 px-6 py-8 backdrop-blur-sm ring-1 ring-white/10"
+                className="mx-auto w-full rounded-2xl bg-[#0a1c27]/60 px-4 py-8 backdrop-blur-sm ring-1 ring-white/10 sm:px-6"
                 variants={fade}
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true, margin: "-80px" }}
             >
             <MotionH1
-                className="font-mono text-white pb-4"
+                className="font-mono text-white pb-4 text-3xl sm:text-5xl"
                 variants={fade}
                 initial="hidden"
                 whileInView="show"
@@ -38,7 +38,7 @@ export default function Contact() {
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ delay: 0.1 }}
             >
-                <p className="font-mono text-2xl text-white pb-4">
+                <p className="font-mono text-base text-white pb-4 sm:text-2xl">
                     If you would like to contact me, feel free to reach out to me!
                 </p>
                 <a
@@ -46,9 +46,9 @@ export default function Contact() {
                     target="_blank"
                     className="flex items-center px-3 py-2 bg-yellow-200 text-black rounded-xl shadow-lg shadow-yellow-200/20 transition-transform duration-300 hover:scale-110 hover:-translate-y-1"
                 >
-                    <MdMail className="text-black text-2xl"></MdMail>
-                    <span className="font-mono text-black text-2xl pl-2 pr-2 -translate-y-0.5">Email me</span>
-                    <MdMail className="text-black text-2xl"></MdMail>
+                    <MdMail className="text-black text-sm sm:text-2xl"></MdMail>
+                    <span className="font-mono text-black text-sm pl-2 pr-2 -translate-y-0.5 sm:text-2xl">Email me</span>
+                    <MdMail className="text-black text-sm sm:text-2xl"></MdMail>
                 </a>
             </MotionDiv>
             </MotionDiv>

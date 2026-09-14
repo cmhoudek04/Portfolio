@@ -32,6 +32,12 @@ body {
   min-height: 100vh;
 }
 
+@media (max-width: 640px) {
+  body {
+    align-items: flex-start;
+  }
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
