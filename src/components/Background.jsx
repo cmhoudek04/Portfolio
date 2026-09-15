@@ -15,7 +15,7 @@ export default function Home() {
         size: 3,
         speed: 0.6,
     } : {
-        particleCount: 170,
+        particleCount: 100,
         fpsLimit: 120,
         linkDistance: 150,
         linkOpacity: 1,
